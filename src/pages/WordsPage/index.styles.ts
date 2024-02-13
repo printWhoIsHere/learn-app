@@ -1,5 +1,4 @@
 import styled from 'styled-components'
-import { Button } from 'antd'
 import { themeConfig } from 'styles/themes/theme'
 
 const {
@@ -15,7 +14,12 @@ export const Wrapper = styled.div`
 	color: ${colorTextBase};
 `
 
-export const ButtonInfo = styled(Button)`
+export const ButtonInfoWrapper = styled.div`
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	justify-content: center;
+	gap: 10px;
 	position: absolute;
 	top: 20px;
 	right: 20px;

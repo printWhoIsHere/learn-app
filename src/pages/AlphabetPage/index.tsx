@@ -12,7 +12,6 @@ const AlphabetPage = () => {
 	return (
 		<Wrapper>
 			<ButtonInfo
-				type='primary'
 				onClick={() => {
 					setIsModalOpen(true)
 				}}

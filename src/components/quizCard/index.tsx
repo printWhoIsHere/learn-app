@@ -21,7 +21,9 @@ const QuizCard: React.FC<QuizCardProps> = ({ data, setCurrentIndex }) => {
 		const [content, oppositeContent, index] = randomContent(data)
 		setContent(content)
 		setOppositeContent(oppositeContent)
-		setCurrentIndex(index)
+		if (setCurrentIndex) {
+			setCurrentIndex(index)
+		}
 	}, [data])
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -40,7 +42,9 @@ const QuizCard: React.FC<QuizCardProps> = ({ data, setCurrentIndex }) => {
 		const [content, oppositeContent, index] = randomContent(data)
 		setContent(content)
 		setOppositeContent(oppositeContent)
-		setCurrentIndex(index)
+		if (setCurrentIndex) {
+			setCurrentIndex(index)
+		}
 		setAnswer(undefined)
 		setText('')
 	}

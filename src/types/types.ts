@@ -66,8 +66,8 @@ interface KeyboardProps {
 }
 interface QuizCardProps {
 	data: DataType
-	currentIndex: number
-	setCurrentIndex: React.Dispatch<React.SetStateAction<number>>
+	currentIndex?: number
+	setCurrentIndex?: React.Dispatch<React.SetStateAction<number>>
 }
 
 interface AlphabetModalProps {
