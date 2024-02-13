@@ -3,7 +3,7 @@ import { Button, Space, Typography } from 'antd'
 import { themeConfig } from 'styles/themes/theme'
 
 const {
-	token: { colorTextBase, colorPrimary },
+	token: { colorTextBase },
 } = themeConfig
 
 export const Wrapper = styled.div`

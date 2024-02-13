@@ -48,7 +48,7 @@ const items: MenuItem[] = [
 	getItem('Settings', '/settings', 'settings', <SettingOutlined />),
 ]
 
-const AppSider: React.FC<AppSiderProps> = ({ setIsDarkTheme }) => {
+const AppSider: React.FC<AppSiderProps> = () => {
 	const location = useLocation()
 	const [collapsed, setCollapsed] = useState<boolean>(false)
 	const [isMobile, setIsMobile] = useState<boolean>(false)
@@ -97,9 +97,7 @@ const AppSider: React.FC<AppSiderProps> = ({ setIsDarkTheme }) => {
 								<Switch
 									style={switchStyle}
 									defaultChecked
-									onChange={(checked: boolean) => {
-										setIsDarkTheme(checked)
-									}}
+									// onChange={(checked: boolean) => {}}
 								/>
 								<MoonOutlined />
 							</>

@@ -1,4 +1,3 @@
-import { useState } from 'react'
 import { Routes, Route } from 'react-router-dom'
 import { ConfigProvider } from 'antd'
 
@@ -16,13 +15,11 @@ import AppLayout from 'components/layout/AppLayout'
 
 const App: React.FC = () => {
 	const { words } = useWordsStore()
-	const [isDarkTheme, setIsDarkTheme] = useState<boolean>(true)
-	const theme = themeConfig
 
 	return (
-		<ConfigProvider theme={theme}>
+		<ConfigProvider theme={themeConfig}>
 			<Routes>
-				<Route path='/' element={<AppLayout setIsDarkTheme={setIsDarkTheme} />}>
+				<Route path='/' element={<AppLayout />}>
 					<Route path='/' element={<HomePage />} />
 					<Route path='/alphabet' element={<ActivityPage data={alphabet} />} />
 					<Route path='/words' element={<ActivityPage data={words} />} />

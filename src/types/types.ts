@@ -54,15 +54,10 @@ type GetMenuItem = (
 ) => MenuItem
 
 // layout
-type SetIsDarkTheme = React.Dispatch<React.SetStateAction<boolean>>
 
-interface AppLayoutProps {
-	setIsDarkTheme: SetIsDarkTheme
-}
+interface AppLayoutProps {}
 
-interface AppSiderProps {
-	setIsDarkTheme: SetIsDarkTheme
-}
+interface AppSiderProps {}
 
 // components
 interface KeyboardProps {

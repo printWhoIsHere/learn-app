@@ -4,10 +4,10 @@ import AppSider from './sider/AppSider'
 
 import { contentStyle } from './AppLayout.styles'
 
-const AppLayout: React.FC<AppLayoutProps> = ({ setIsDarkTheme }) => {
+const AppLayout: React.FC<AppLayoutProps> = () => {
 	return (
 		<Layout>
-			<AppSider setIsDarkTheme={setIsDarkTheme} />
+			<AppSider />
 			<Layout>
 				<Layout.Content style={contentStyle}>
 					<Outlet />
