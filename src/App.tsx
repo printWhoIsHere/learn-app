@@ -3,26 +3,22 @@ import { ConfigProvider } from 'antd'
 
 import { themeConfig } from 'styles/themes/theme'
 
-import { alphabet } from 'data/alphabetData'
-import { useWordsStore } from 'data/store/useWordsStore'
-
 import HomePage from 'pages/HomePage/index.tsx'
-import ActivityPage from 'pages/ActivityPage'
+import WordsPage from 'pages/WordsPage'
 import DictionaryPage from 'pages/DictionaryPage'
 import NotFoundPage from 'pages/NotFoundPage'
 
 import AppLayout from 'components/layout/AppLayout'
+import AlphabetPage from 'pages/AlphabetPage'
 
 const App: React.FC = () => {
-	const { words } = useWordsStore()
-
 	return (
 		<ConfigProvider theme={themeConfig}>
 			<Routes>
 				<Route path='/' element={<AppLayout />}>
 					<Route path='/' element={<HomePage />} />
-					<Route path='/alphabet' element={<ActivityPage data={alphabet} />} />
-					<Route path='/words' element={<ActivityPage data={words} />} />
+					<Route path='/alphabet' element={<AlphabetPage />} />
+					<Route path='/words' element={<WordsPage />} />
 					<Route path='/dictionary' element={<DictionaryPage />} />
 					<Route path='/progress' element={<NotFoundPage text={true} />} />
 					<Route path='/settings' element={<NotFoundPage text={true} />} />

@@ -10,7 +10,7 @@ import Keyboard from 'components/keyboard'
 
 import { Wrapper, Title, Compact, InputButton } from './index.styles'
 
-const QuizCard: React.FC<QuizCardProps> = ({ data }) => {
+const QuizCard: React.FC<QuizCardProps> = ({ data, setCurrentIndex }) => {
 	const { text, setText, handleKeyPress } = useKeyboard()
 	const [keyboardType, setKeyboardType] = useState<string>('he')
 	const [content, setContent] = useState<string>('')
@@ -18,9 +18,10 @@ const QuizCard: React.FC<QuizCardProps> = ({ data }) => {
 	const [answer, setAnswer] = useState<undefined | boolean>(undefined)
 
 	useEffect(() => {
-		const [content, oppositeContent] = randomContent(data)
+		const [content, oppositeContent, index] = randomContent(data)
 		setContent(content)
 		setOppositeContent(oppositeContent)
+		setCurrentIndex(index)
 	}, [data])
 
 	const handleChange = (e: React.ChangeEvent<HTMLInputElement>) => {
@@ -36,9 +37,10 @@ const QuizCard: React.FC<QuizCardProps> = ({ data }) => {
 	}
 
 	const handleNext = () => {
-		const [content, oppositeContent] = randomContent(data)
+		const [content, oppositeContent, index] = randomContent(data)
 		setContent(content)
 		setOppositeContent(oppositeContent)
+		setCurrentIndex(index)
 		setAnswer(undefined)
 		setText('')
 	}

@@ -4,7 +4,7 @@ A simple React application for learning foreign languages
 
 ## Website
 
-[**LanguageRoom.app**](https://snazzy-rabanadas-b7c073.netlify.app/)
+[**LanguageRoom.app**](https://ornate-queijadas-4857b4.netlify.app/)
 
 ## Development
 

@@ -11,5 +11,5 @@ export const randomContent: RandomContent = (data) => {
 	const oppositeProperty = randomProperty === 'foreign' ? 'native' : 'foreign'
 	const oppositeContent = randomElement[oppositeProperty]
 
-	return [content, oppositeContent]
+	return [content, oppositeContent, randomIndex]
 }

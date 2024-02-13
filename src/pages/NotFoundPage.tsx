@@ -6,7 +6,7 @@ const {
 	token: { colorTextBase },
 } = themeConfig
 
-const NotFoundPage: React.FC<NotFoundPage> = ({ text }) => (
+const NotFoundPage: React.FC<NotFoundPageProps> = ({ text }) => (
 	<div
 		style={{
 			width: '100%',

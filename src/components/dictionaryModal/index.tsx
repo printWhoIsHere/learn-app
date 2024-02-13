@@ -2,7 +2,7 @@ import { Button, Form, Input, Modal } from 'antd'
 import { useWordsStore } from '../../data/store/useWordsStore'
 import { buttonFormStyle, formStyle } from './index.styles'
 
-const ModalComponent: React.FC<ModalComponent> = ({
+const dictionaryModal: React.FC<DictionaryModalProps> = ({
 	isModalOpen,
 	setIsModalOpen,
 }) => {
@@ -61,4 +61,4 @@ const ModalComponent: React.FC<ModalComponent> = ({
 	)
 }
 
-export default ModalComponent
+export default dictionaryModal

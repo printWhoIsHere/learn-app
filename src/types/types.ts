@@ -66,15 +66,23 @@ interface KeyboardProps {
 }
 interface QuizCardProps {
 	data: DataType
+	currentIndex: number
+	setCurrentIndex: React.Dispatch<React.SetStateAction<number>>
+}
+
+interface AlphabetModalProps {
+	isModalOpen: boolean
+	setIsModalOpen: (isModalOpen: boolean) => void
+	alphabet: AlphabetItem[]
+}
+
+interface DictionaryModalProps {
+	isModalOpen: boolean
+	setIsModalOpen: (isModalOpen: boolean) => void
 }
 
 // pages
 interface DictionaryPagePops {}
-
-interface ModalComponent {
-	isModalOpen: boolean
-	setIsModalOpen: (isModalOpen: boolean) => void
-}
 
 interface HomePageProps {}
 
@@ -82,11 +90,11 @@ interface ActivityPageProps {
 	data: DataType
 }
 
-interface NotFoundPage {
+interface NotFoundPageProps {
 	text?: boolean
 }
 
 // utils
 type GenerateId = () => string
 
-type RandomContent = (data: DataType) => [string, string]
+type RandomContent = (data: DataType) => [string, string, number]
